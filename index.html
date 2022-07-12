@@ -31,6 +31,25 @@
   .pl-1 {
     padding-left: 8px !important;
   }
+  body {
+    color: #262626;
+  }
+  .card-text-item-text {
+    padding-left: 8px !important;
+  }
+
+  .card-text-item-list {
+    padding-top: 6px !important;
+  }
+
+  .list-unstyled {
+    margin-bottom: 0px !important;
+  }
+
+  .card-img-top {
+    height: 170px !important;
+    object-fit: cover;
+  }
 </style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -51,8 +70,14 @@
           <img class="card-img-top" src="image/cars/alfa-romeo-giulia.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title"><img class="country-icon" src="image/flags/italy.png"/><span class="align-middle">Alfa Romeo Giulia 2016</span></h5>
-            <p class="card-text"><i class="fa-solid fa-gas-pump"></i><span class="pl-1">Gas, 2.0</span></p>           
-            <p class="card-text"><img class="car-parts" src="image/icons/dollar.png"/>+4000</p>    
+            <ul class="list-unstyled">
+              <li class="card-text-item-list">
+                <i class="fa-solid fa-gas-pump"></i><span class="card-text-item-text">Gas, 2.0</span>
+              </li>
+              <li class="card-text-item-list">
+                <i class="fa-brands fa-superpowers"></i><span class="card-text-item-text">245 ph</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -61,8 +86,11 @@
           <img class="card-img-top" src="image/cars/i3.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title"><img class="country-icon" src="image/flags/germany.png"/><span class="align-middle">BMW i3 2013</span></h5>
-            <p class="card-text"><i class="fa-solid fa-charging-station"></i><span class="pl-1">Hybrid, 0.8</span></p>           
-            <p class="card-text"><img class="car-parts" src="image/icons/dollar.png"/>+5000</p>    
+            <p class="card-text">
+              <i class="fa-brands fa-superpowers"></i><span class="pl-1">240PH</span>
+              <i class="fa-solid fa-charging-station"></i><span class="pl-1">Hybrid, 0.8</span>
+            </p>
+            <!-- p class="card-text"><img class="car-parts" src="image/icons/dollar.png"/>+5000</p -->    
           </div>
         </div>
       </div>
@@ -79,7 +107,7 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="image/cars/tesla.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title"><img class="country-icon" src="image/flags/germany.png"/><span class="align-middle">Tesla Model S 2017</span></h5>
+            <h5 class="card-title"><img class="country-icon" src="image/flags/usa.png"/><span class="align-middle">Tesla Model S 2017</span></h5>
             <p class="card-text"><i class="fa-solid fa-charging-station"></i><span class="pl-1">Electric</span></p>            
           </div>
         </div>
