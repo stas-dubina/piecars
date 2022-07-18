@@ -1,39 +1,56 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/070ae587ea.js" crossorigin="anonymous"></script>
-  </head>
+  <script src="https://kit.fontawesome.com/070ae587ea.js" crossorigin="anonymous"></script>
+</head>
 <style>
   .navbar {
     padding-left: 20px;
   }
+
   .pl-0 {
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+
   .pt-1 {
     padding-top: 20px !important;
   }
+
   .country-icon {
     width: 24px !important;
     height: 24px !important;
     margin-right: 8px;
   }
+
+  .country-icon-header {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
   .car-parts {
     width: 24px !important;
     height: 24px !important;
     margin-right: 8px;
   }
+
   .pl-1 {
     padding-left: 8px !important;
   }
+
+  .pl-2 {
+    padding-left: 16px !important;
+  }
+
   body {
     color: #262626;
   }
+
   .card-text-item-text {
     padding-left: 8px !important;
   }
@@ -50,30 +67,61 @@
     height: 170px !important;
     object-fit: cover;
   }
+
   .btn {
     float: right;
   }
+
+  .round {
+    border-radius: 100px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .header-car-block {
+    padding: 8px;
+  }
+  .header-car-block-first {
+    padding: 8px 8px 8px 0px;
+  }
+  .row-content {
+    margin-top: 16px;
+  }
 </style>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button type="button" class="btn btn-outline-dark"><a href="create.html">Create new</a></button>
-  </nav>
-  <div class="container-fluid pl-0">
-    <div class="row">
-      <!-- header baner -->
-      <div class="col">
-        <img class="img-fluid" src="image/channels4_banner.jpg"/>
+  <div class="container pt-1">
+    <div class="d-flex flex-row">
+      <div>
+        <img class="round" src="image/avatar-bb.jpg" />
+      </div>
+      <div class="d-flex flex-column pl-2 justify-content-center">
+        <div><i class="fa-solid fa-car"></i><span class="pl-1">123</span></div>
+        <div><i class="fa-solid fa-location-pin"></i><span class="pl-1">2442 Rice Ave, West Sacramento, CA 95691,
+            USA</span></div>
+        <div class="d-flex flex-row">
+          <div class="d-flex flex-column align-items-center header-car-block-first">
+            <img class="country-icon-header" src="image/flags/italy.png" />
+            <div>1</div>
+          </div>
+          <div class="d-flex flex-column align-items-center header-car-block">
+            <img class="country-icon-header" src="image/flags/germany.png" />
+            <div>2</div>
+          </div>
+          <div class="d-flex flex-column align-items-center header-car-block">
+            <img class="country-icon-header" src="image/flags/usa.png" />
+            <div>3</div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container pt-1">
-    <div class="row">
+    <div class="row row-content">
       <div class="col">
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="image/cars/alfa-romeo-giulia.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title"><img class="country-icon" src="image/flags/italy.png"/><span class="align-middle">Alfa Romeo Giulia 2016</span></h5>
+            <h5 class="card-title"><img class="country-icon" src="image/flags/italy.png" /><span
+                class="align-middle">Alfa Romeo Giulia 2016</span></h5>
             <ul class="list-unstyled">
               <li class="card-text-item-list">
                 <i class="fa-solid fa-gas-pump"></i><span class="card-text-item-text">Gas, 2.0</span>
@@ -89,12 +137,13 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="image/cars/i3.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title"><img class="country-icon" src="image/flags/germany.png"/><span class="align-middle">BMW i3 2013</span></h5>
+            <h5 class="card-title"><img class="country-icon" src="image/flags/germany.png" /><span
+                class="align-middle">BMW i3 2013</span></h5>
             <p class="card-text">
               <i class="fa-brands fa-superpowers"></i><span class="pl-1">240PH</span>
               <i class="fa-solid fa-charging-station"></i><span class="pl-1">Hybrid, 0.8</span>
             </p>
-            <!-- p class="card-text"><img class="car-parts" src="image/icons/dollar.png"/>+5000</p -->    
+            <!-- p class="card-text"><img class="car-parts" src="image/icons/dollar.png"/>+5000</p -->
           </div>
         </div>
       </div>
@@ -102,8 +151,9 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="image/cars/cayenne.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title"><img class="country-icon" src="image/flags/germany.png"/><span class="align-middle">Porsche Cayenne 2017</span></h5>
-            <p class="card-text"><i class="fa-solid fa-gas-pump"></i><span class="pl-1">Gas, 3.0</span></p>            
+            <h5 class="card-title"><img class="country-icon" src="image/flags/germany.png" /><span
+                class="align-middle">Porsche Cayenne 2017</span></h5>
+            <p class="card-text"><i class="fa-solid fa-gas-pump"></i><span class="pl-1">Gas, 3.0</span></p>
           </div>
         </div>
       </div>
@@ -111,8 +161,9 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="image/cars/tesla.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title"><img class="country-icon" src="image/flags/usa.png"/><span class="align-middle">Tesla Model S 2017</span></h5>
-            <p class="card-text"><i class="fa-solid fa-charging-station"></i><span class="pl-1">Electric</span></p>            
+            <h5 class="card-title"><img class="country-icon" src="image/flags/usa.png" /><span
+                class="align-middle">Tesla Model S 2017</span></h5>
+            <p class="card-text"><i class="fa-solid fa-charging-station"></i><span class="pl-1">Electric</span></p>
           </div>
         </div>
       </div>
