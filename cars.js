@@ -2,6 +2,8 @@ const COUNTRY_GERMANY = 'germany'
 const COUNTRY_ITALY = 'italy'
 const COUNTRY_USA = 'usa'
 
+const COUNTRIES = [COUNTRY_GERMANY, COUNTRY_ITALY, COUNTRY_USA]
+
 const cars = [
     {
         title: "Alfa Romeo Giulia",

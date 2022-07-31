@@ -10,6 +10,7 @@
   <script src="./cars.js"></script>
   <link href="./style.css" rel="stylesheet">
 </head>
+
 <body>
   <div class="container pt-1">
     <div class="d-flex flex-row">
@@ -20,19 +21,7 @@
         <div><i class="fa-solid fa-car"></i><span class="pl-1">123</span></div>
         <div><i class="fa-solid fa-location-pin"></i><span class="pl-1">2442 Rice Ave, West Sacramento, CA 95691,
             USA</span></div>
-        <div class="d-flex flex-row">
-          <div class="d-flex flex-column align-items-center header-car-block-first">
-            <img class="country-icon-header" src="image/flags/italy.png" />
-            <div>1</div>
-          </div>
-          <div class="d-flex flex-column align-items-center header-car-block">
-            <img class="country-icon-header" src="image/flags/germany.png" />
-            <div>2</div>
-          </div>
-          <div class="d-flex flex-column align-items-center header-car-block">
-            <img class="country-icon-header" src="image/flags/usa.png" />
-            <div>3</div>
-          </div>
+        <div id="countries" class="d-flex flex-row">
         </div>
       </div>
     </div>
@@ -42,7 +31,7 @@
   </div>
 
   <script>
-    for(const car of cars) {
+    for (const car of cars) {
       const carCard = `<div class="card" style="width: 18rem;">
         <img class="card-img-top" src="image/cars/${car.img}" alt="Card image cap">
         <div class="card-body">
@@ -59,6 +48,16 @@
         </div>
       </div>`
       document.getElementById('cards').innerHTML += carCard
+    }
+
+    for (const country of COUNTRIES) {
+      
+      const carNumbers = cars.filter(car => car.country === country).length
+      const flag = `<div class="d-flex flex-column align-items-center header-car-block-first">
+            <img class="country-icon-header" src="image/flags/${country}.png" />
+            <div>${carNumbers}</div>
+          </div>`
+      document.getElementById('countries').innerHTML += flag
     }
   </script>
 </body>
