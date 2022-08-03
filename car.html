@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/070ae587ea.js" crossorigin="anonymous"></script>
+    <script src="./cars.js"></script>
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="image/cars/alfa-romeo-giulia.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><img class="country-icon" src="image/flags/italy.png" /><span
+                  class="align-middle">Alfa Romeo Giulia 2016</span></h5>
+                <ul class="list-unstyled">
+                  <li class="card-text-item-list">
+                    <i class="fa-solid fa-charging-station"></i><span class="card-text-item-text">Gas, 2.0</span>
+                  </li>
+                  <li class="card-text-item-list">
+                    <i class="fa-brands fa-superpowers"></i><span class="card-text-item-text">240 hp</span>
+                  </li>
+                </ul>
+            </div>
+          </div>
+    </div>
+    <script>
+        const params = new URLSearchParams(document.location.search);
+        const id = params.get('id')
+        const car = cars.filter(car => car.id == id)[0]
+        console.log('car', car)
+    </script>
+</body>

@@ -37,4 +37,4 @@ const cars = [
         hp: 362,
         country: COUNTRY_USA
     }
-]
+].map((car, i) => { return { id: i + 1, ...car} })

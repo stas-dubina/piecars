@@ -18,7 +18,7 @@
         <img class="round" src="image/avatar-bb.jpg" />
       </div>
       <div class="d-flex flex-column pl-2 justify-content-center">
-        <div><i class="fa-solid fa-car"></i><span class="pl-1">123</span></div>
+        <div><i class="fa-solid fa-car"></i><span id="carsCount" class="pl-1"></span></div>
         <div><i class="fa-solid fa-location-pin"></i><span class="pl-1">2442 Rice Ave, West Sacramento, CA 95691,
             USA</span></div>
         <div id="countries" class="d-flex flex-row">
@@ -45,6 +45,7 @@
                 <i class="fa-brands fa-superpowers"></i><span class="card-text-item-text">${car.hp} hp</span>
               </li>
             </ul>
+            <a href="car.html?id=${car.id}" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>`
       document.getElementById('cards').innerHTML += carCard
@@ -59,5 +60,7 @@
           </div>`
       document.getElementById('countries').innerHTML += flag
     }
+
+    document.getElementById('carsCount').innerHTML = `${cars.length}`
   </script>
 </body>
